@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Stack & Tools</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuración personalizada de Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-heading': '#1f2937', 
+            'light-heading': '#f3f4f6', 
+            'dark-card': '#374151',
+            'content': '#9ca3af',
+            'light-content': '#d1d5db'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* ---- particles.js container ---- */ 
+    #particles-js { 
+      position: fixed; 
+      top: 0;
+      left: 0;
+      width: 100vw; 
+      height: 100vh; 
+      background-color: #000000; 
+      background-repeat: no-repeat; 
+      background-size: cover; 
+      background-position: 50% 50%; 
+      z-index: -1000;
+    }
+    
+    body {
+      position: relative;
+    }
+  </style>
+</head>
+<body class="bg-transparent transition-colors duration-300">
+
+  <!-- Contenedor de Partículas -->
+  <div id="particles-js"></div> 
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+
+  <!-- ================= HEADER ================= -->
+  <header class="bg-white w-full z-10 relative">
+    <div class="container mx-auto md:flex justify-between py-2 px-5 max-w-7xl">
+      <div class="flex justify-between items-center py-1 md:py-1">
+        <!-- Logo -->
+        <a href="index.html">
+          <img class="w-14" src="img/feral2.png" alt="logo" />
+        </a>
+        
+        <!-- Botón Menú Móvil -->
+        <div id="menu-btn" class="cursor-pointer md:hidden">
+          <svg class="stroke-black" width="25" height="20" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.4375 1.3125H14.5625M1.4375 11.3125H14.5625H1.4375ZM1.4375 6.3125H14.5625H1.4375Z" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    <!-- Navegación -->
+      <nav id="mobile-menu" class="hidden text-center md:flex justify-between w-full md:w-auto">
+        <ul class="text-black font-medium md:flex items-center md:space-x-5 md:mr-7">
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io" class="hover:text-blue-500">Projects</a></li>
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io/about.html" class="hover:text-blue-500">About</a></li>
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io/stack.html" class="hover:text-blue-500">Stack</a></li>
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io/contact.html" class="text-blue-500 hover:text-blue-500">Contact</a></li>
+        </ul>
+        
+        <!-- Redes Sociales -->
+        <ul class="flex justify-center items-center my-5 md:my-0 md:space-x-5 md:mr-5">
+          <li>
+            <a href="https://github.com/feralCode0x" target="_blank" rel="noreferrer noopener">
+              <svg class="fill-black hover:fill-blue-500 transition-colors" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                <path d="M15 0C6.7125 0 0 6.7125 0 15C0 21.6375 4.29375 27.2437 10.2563 29.2313C11.0063 29.3625 11.2875 28.9125 11.2875 28.5188C11.2875 28.1625 11.2688 26.9813 11.2688 25.725C7.5 26.4188 6.525 24.8062 6.225 23.9625C6.05625 23.5312 5.325 22.2 4.6875 21.8438C4.1625 21.5625 3.4125 20.8687 4.66875 20.85C5.85 20.8313 6.69375 21.9375 6.975 22.3875C8.325 24.6562 10.4812 24.0187 11.3438 23.625C11.475 22.65 11.8688 21.9937 12.3 21.6187C8.9625 21.2437 5.475 19.95 5.475 14.2125C5.475 12.5813 6.05625 11.2313 7.0125 10.1813C6.8625 9.80625 6.3375 8.26875 7.1625 6.20625C7.1625 6.20625 8.41875 5.8125 11.2875 7.74375C12.4875 7.40625 13.7625 7.2375 15.0375 7.2375C16.3125 7.2375 17.5875 7.40625 18.7875 7.74375C21.6562 5.79375 22.9125 6.20625 22.9125 6.20625C23.7375 8.26875 23.2125 9.80625 23.0625 10.1813C24.0188 11.2313 24.6 12.5625 24.6 14.2125C24.6 19.9688 21.0938 21.2437 17.7563 21.6187C18.3 22.0875 18.7688 22.9875 18.7688 24.3937C18.7688 26.4 18.75 28.0125 18.75 28.5188C18.75 28.9125 19.0312 29.3813 19.7812 29.2313C22.759 28.2259 25.3465 26.3121 27.1796 23.7592C29.0127 21.2063 29.9991 18.1429 30 15C30 6.7125 23.2875 0 15 0Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Script para la animación de partículas -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 6, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "repulse": { "distance": 200, "duration": 0.4 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+  <!-- ================= MAIN: TECH STACK & TOOLS ================= -->
+  <main class="container mx-auto px-5 max-w-7xl pt-6 mb-20 relative z-10">
+    
+    <!-- Sección: Tech Stack -->
+    <section>
+      <h1 class="text-2xl text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+        Tech Stack
+      </h1>
+      <p class="text-content py-2 lg:max-w-3xl text-gray-300">
+        Technologies I've been working with recently
+      </p>
+    </section>
+
+    <!-- Grid de Tecnologías -->
+    <section class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 items-center justify-items-center gap-8 pt-8">
+      <div class="bg-white/10 backdrop-blur-sm p-2 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/html.png" title="HTML5" alt="HTML5" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/css.png" title="CSS3" alt="CSS3" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/js.png" title="JavaScript" alt="JavaScript" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/react.png" title="React & React Native" alt="React" class="max-h-16 max-w-16 object-contain" />
+      </div>
+            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/solidity.png" title="Solidity" alt="Solidity" class="max-h-16 max-w-16 object-contain" />
+      </div>
+       <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/go.png" title="Go Lang" alt="Go Lang" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/redux.png" title="Redux" alt="Redux" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/tailwind.png" title="Tailwind CSS" alt="Tailwind" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/bootstrap.png" title="Bootstrap" alt="Bootstrap" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/mongodb.png" title="MongoDB" alt="MongoDB" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/axios.png" title="Axios" alt="Axios" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/express.png" title="Express" alt="Express" class="max-h-16 max-w-16 object-contain" />
+      </div>
+    </section>
+
+    <!-- Sección: Tools -->
+    <section>
+      <h1 class="text-2xl pt-14 text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+        Tools
+      </h1>
+    </section>
+
+    <!-- Grid de Herramientas -->
+    <section class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 items-center justify-items-center gap-8 pt-8">
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/remix.png" title="Remix IDE" alt="Remix IDE" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/vscode.png" title="Visual Studio Code" alt="VS Code" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/github.png" title="Github" alt="Github" class="max-h-16 max-w-16 object-contain" />
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/npm.png" title="NPM" alt="NPM" class="max-h-16 max-w-16 object-contain" />
+      </div>
+         <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:scale-110 transition-transform duration-300 flex items-center justify-center w-28 h-28">
+        <img src="img/techstack/foundry-logo.png" title="Cast Foundry" alt="Cast Foundry" class="max-h-16 max-w-16 object-contain" />
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Script Menú Móvil -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

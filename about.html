@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Portfolio</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuración de colores personalizados de Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-heading': '#1f2937', 
+            'light-heading': '#f3f4f6', 
+            'dark-card': '#374151',
+            'content': '#4b5563',
+            'light-content': '#d1d5db'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* ---- particles.js container ---- */ 
+    #particles-js { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw; 
+      height: 100vh; 
+      background-color: #000000; 
+      background-repeat: no-repeat; 
+      background-size: cover; 
+      background-position: 50% 50%; 
+      z-index: -1000;
+    }
+    
+    body {
+      position: relative;
+    }
+  </style>
+</head>
+<body class="bg-transparent transition-colors duration-300">
+
+  <!-- Contenedor de Partículas -->
+  <div id="particles-js"></div> 
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+
+  <!-- ================= HEADER ================= -->
+  <header class="bg-white w-full z-10 relative">
+    <div class="container mx-auto md:flex justify-between py-2 px-5 max-w-7xl">
+      <div class="flex justify-between items-center py-1 md:py-1">
+        <!-- Logo -->
+        <a href="index.html">
+          <img class="w-14" src="img/feral2.png" alt="logo" />
+        </a>
+        
+        <!-- Botón Menú Móvil -->
+        <div id="menu-btn" class="cursor-pointer md:hidden">
+          <svg class="stroke-black" width="25" height="20" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.4375 1.3125H14.5625M1.4375 11.3125H14.5625H1.4375ZM1.4375 6.3125H14.5625H1.4375Z" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+
+    <!-- Navegación -->
+      <nav id="mobile-menu" class="hidden text-center md:flex justify-between w-full md:w-auto">
+        <ul class="text-black font-medium md:flex items-center md:space-x-5 md:mr-7">
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io" class="hover:text-blue-500">Projects</a></li>
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io/about.html" class="hover:text-blue-500">About</a></li>
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io/stack.html" class="hover:text-blue-500">Stack</a></li>
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io/contact.html" class="text-blue-500 hover:text-blue-500">Contact</a></li>
+        </ul>
+        
+        <!-- Redes Sociales -->
+        <ul class="flex justify-center items-center my-5 md:my-0 md:space-x-5 md:mr-5">
+          <li>
+            <a href="https://github.com/feralCode0x" target="_blank" rel="noreferrer noopener">
+              <svg class="fill-black hover:fill-blue-500 transition-colors" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                <path d="M15 0C6.7125 0 0 6.7125 0 15C0 21.6375 4.29375 27.2437 10.2563 29.2313C11.0063 29.3625 11.2875 28.9125 11.2875 28.5188C11.2875 28.1625 11.2688 26.9813 11.2688 25.725C7.5 26.4188 6.525 24.8062 6.225 23.9625C6.05625 23.5312 5.325 22.2 4.6875 21.8438C4.1625 21.5625 3.4125 20.8687 4.66875 20.85C5.85 20.8313 6.69375 21.9375 6.975 22.3875C8.325 24.6562 10.4812 24.0187 11.3438 23.625C11.475 22.65 11.8688 21.9937 12.3 21.6187C8.9625 21.2437 5.475 19.95 5.475 14.2125C5.475 12.5813 6.05625 11.2313 7.0125 10.1813C6.8625 9.80625 6.3375 8.26875 7.1625 6.20625C7.1625 6.20625 8.41875 5.8125 11.2875 7.74375C12.4875 7.40625 13.7625 7.2375 15.0375 7.2375C16.3125 7.2375 17.5875 7.40625 18.7875 7.74375C21.6562 5.79375 22.9125 6.20625 22.9125 6.20625C23.7375 8.26875 23.2125 9.80625 23.0625 10.1813C24.0188 11.2313 24.6 12.5625 24.6 14.2125C24.6 19.9688 21.0938 21.2437 17.7563 21.6187C18.3 22.0875 18.7688 22.9875 18.7688 24.3937C18.7688 26.4 18.75 28.0125 18.75 28.5188C18.75 28.9125 19.0312 29.3813 19.7812 29.2313C22.759 28.2259 25.3465 26.3121 27.1796 23.7592C29.0127 21.2063 29.9991 18.1429 30 15C30 6.7125 23.2875 0 15 0Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= MAIN: ABOUT ================= -->
+  <main class="container mx-auto px-5 max-w-7xl pt-6 pb-20 relative z-10">
+
+    <!-- Componente DownloadButton traducido -->
+    <div class="mb-6">
+      <a href="resume.pdf" download class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download CV
+      </a>
+    </div>
+
+    <!-- Sección About Me -->
+    <section>
+      <h1 class="text-2xl text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+        About Me
+      </h1>
+      <p class="text-light-content py-8 lg:max-w-3xl">
+        Selftaught fullstack blockchain and MERN developer with 4 years of experience. Strong hability on doing research and use abstract logic for solving problems.
+      </p>
+    </section>
+
+    <!-- Sección Work Experience -->
+    <section>
+      <h1 class="text-2xl pt-10 text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+        Work Experience
+      </h1>
+
+      <!-- Componente Work -->
+      <article class="pt-8 border-b-2 border-gray-700 pb-5 border-opacity-20">
+        <div class="flex justify-between items-center">
+          <h2 class="text-light-heading text-lg md:text-xl font-medium">Fullstack Web & App Developer</h2>
+          <div class="bg-green-500/20 text-green-400 text-xs inline-block rounded-3xl px-3 py-1 min-w-fit">
+            Full Time
+          </div>
+        </div>
+        <div class="flex justify-between pt-2">
+          <div class="flex flex-col md:flex-row">
+            <div class="flex items-center pr-5">
+              <svg class="fill-light-heading min-w-fit" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.33331 1.5V10.5H7.33331V8.75H8.66665V10.5H12.6666V1.5H3.33331ZM4.66665 2.5H5.99998V3.5H4.66665V2.5ZM7.33331 2.5H8.66665V3.5H7.33331V2.5ZM9.99998 2.5H11.3333V3.5H9.99998V2.5ZM4.66665 4.5H5.99998V5.5H4.66665V4.5ZM7.33331 4.5H8.66665V5.5H7.33331V4.5ZM9.99998 4.5H11.3333V5.5H9.99998V4.5ZM4.66665 6.5H5.99998V7.5H4.66665V6.5ZM7.33331 6.5H8.66665V7.5H7.33331V6.5ZM9.99998 6.5H11.3333V7.5H9.99998V6.5ZM4.66665 8.5H5.99998V9.5H4.66665V8.5ZM9.99998 8.5H11.3333V9.5H9.99998V8.5Z" />
+              </svg>
+              <p class="text-light-content text-xs md:text-sm font-light pl-1">Freelance</p>
+            </div>
+            <div class="flex items-center">
+              <svg class="fill-light-heading min-w-fit" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 6.75C7.50555 6.75 7.0222 6.64003 6.61108 6.43401C6.19995 6.22798 5.87952 5.93514 5.6903 5.59253C5.50108 5.24992 5.45157 4.87292 5.54804 4.50921C5.6445 4.14549 5.8826 3.8114 6.23223 3.54918C6.58187 3.28695 7.02732 3.10838 7.51228 3.03603C7.99723 2.96368 8.4999 3.00081 8.95671 3.14273C9.41353 3.28464 9.80397 3.52496 10.0787 3.83331C10.3534 4.14165 10.5 4.50416 10.5 4.875C10.4992 5.3721 10.2356 5.84867 9.76689 6.20017C9.29822 6.55167 8.6628 6.74941 8 6.75ZM8 3.75C7.70333 3.75 7.41332 3.81598 7.16665 3.9396C6.91997 4.06321 6.72771 4.23892 6.61418 4.44448C6.50065 4.65005 6.47095 4.87625 6.52882 5.09448C6.5867 5.31271 6.72956 5.51316 6.93934 5.6705C7.14912 5.82783 7.41639 5.93498 7.70737 5.97838C7.99834 6.02179 8.29994 5.99951 8.57403 5.91437C8.84812 5.82922 9.08238 5.68502 9.24721 5.50002C9.41203 5.31501 9.5 5.09751 9.5 4.875C9.4996 4.57672 9.34144 4.29075 9.06022 4.07983C8.779 3.86892 8.3977 3.7503 8 3.75Z" />
+                <path d="M8.00001 11.25L3.78201 7.51912C3.7234 7.4631 3.66539 7.40673 3.60801 7.35C2.8875 6.63817 2.49826 5.76871 2.50001 4.875C2.50001 3.78098 3.07947 2.73177 4.11092 1.95818C5.14237 1.1846 6.54132 0.75 8.00001 0.75C9.4587 0.75 10.8576 1.1846 11.8891 1.95818C12.9205 2.73177 13.5 3.78098 13.5 4.875C13.5018 5.7683 13.1127 6.63737 12.3925 7.34888L12.392 7.35C12.392 7.35 12.242 7.49775 12.2195 7.51763L8.00001 11.25ZM4.40601 6.89813C4.40701 6.89813 4.52301 7.01362 4.54951 7.03837L8.00001 10.0905L11.455 7.03425C11.477 7.01362 11.594 6.89738 11.5945 6.897C12.1831 6.31542 12.5012 5.60514 12.5 4.875C12.5 3.97989 12.0259 3.12145 11.182 2.48851C10.3381 1.85558 9.19348 1.5 8.00001 1.5C6.80653 1.5 5.66194 1.85558 4.81803 2.48851C3.97411 3.12145 3.50001 3.97989 3.50001 4.875C3.49896 5.60559 3.81739 6.31628 4.40651 6.89813H4.40601Z" />
+              </svg>
+              <p class="text-light-content text-xs md:text-sm font-light pl-1">Chile</p>
+            </div>
+          </div>
+          <p class="text-light-content text-xs md:text-sm font-light pl-1 min-w-fit">May 2025 - Dec 2021</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sección Education -->
+    <section>
+      <h1 class="text-2xl pt-10 text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+        Education
+      </h1>
+
+      <!-- Componente Edu -->
+      <article class="pt-8 border-b-2 border-gray-700 pb-5 border-opacity-20">
+        <div class="flex justify-between items-center">
+          <h2 class="text-light-heading text-lg md:text-xl font-medium">Frontend & Backend Development</h2>
+        </div>
+        <div class="flex justify-between pt-2">
+          <div class="flex flex-col md:flex-row">
+            <div class="flex items-center pr-5">
+              <svg class="fill-light-heading min-w-fit" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.33331 1.5V10.5H7.33331V8.75H8.66665V10.5H12.6666V1.5H3.33331ZM4.66665 2.5H5.99998V3.5H4.66665V2.5ZM7.33331 2.5H8.66665V3.5H7.33331V2.5ZM9.99998 2.5H11.3333V3.5H9.99998V2.5ZM4.66665 4.5H5.99998V5.5H4.66665V4.5ZM7.33331 4.5H8.66665V5.5H7.33331V4.5ZM9.99998 4.5H11.3333V5.5H9.99998V4.5ZM4.66665 6.5H5.99998V7.5H4.66665V6.5ZM7.33331 6.5H8.66665V7.5H7.33331V6.5ZM9.99998 6.5H11.3333V7.5H9.99998V6.5ZM4.66665 8.5H5.99998V9.5H4.66665V8.5ZM9.99998 8.5H11.3333V9.5H9.99998V8.5Z" />
+              </svg>
+              <p class="text-light-content text-xs md:text-sm font-light pl-1">Selftaught</p>
+            </div>
+            <div class="flex items-center">
+              <svg class="fill-light-heading min-w-fit" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 6.75C7.50555 6.75 7.0222 6.64003 6.61108 6.43401C6.19995 6.22798 5.87952 5.93514 5.6903 5.59253C5.50108 5.24992 5.45157 4.87292 5.54804 4.50921C5.6445 4.14549 5.8826 3.8114 6.23223 3.54918C6.58187 3.28695 7.02732 3.10838 7.51228 3.03603C7.99723 2.96368 8.4999 3.00081 8.95671 3.14273C9.41353 3.28464 9.80397 3.52496 10.0787 3.83331C10.3534 4.14165 10.5 4.50416 10.5 4.875C10.4992 5.3721 10.2356 5.84867 9.76689 6.20017C9.29822 6.55167 8.6628 6.74941 8 6.75ZM8 3.75C7.70333 3.75 7.41332 3.81598 7.16665 3.9396C6.91997 4.06321 6.72771 4.23892 6.61418 4.44448C6.50065 4.65005 6.47095 4.87625 6.52882 5.09448C6.5867 5.31271 6.72956 5.51316 6.93934 5.6705C7.14912 5.82783 7.41639 5.93498 7.70737 5.97838C7.99834 6.02179 8.29994 5.99951 8.57403 5.91437C8.84812 5.82922 9.08238 5.68502 9.24721 5.50002C9.41203 5.31501 9.5 5.09751 9.5 4.875C9.4996 4.57672 9.34144 4.29075 9.06022 4.07983C8.779 3.86892 8.3977 3.7503 8 3.75Z" />
+                <path d="M8.00001 11.25L3.78201 7.51912C3.7234 7.4631 3.66539 7.40673 3.60801 7.35C2.8875 6.63817 2.49826 5.76871 2.50001 4.875C2.50001 3.78098 3.07947 2.73177 4.11092 1.95818C5.14237 1.1846 6.54132 0.75 8.00001 0.75C9.4587 0.75 10.8576 1.1846 11.8891 1.95818C12.9205 2.73177 13.5 3.78098 13.5 4.875C13.5018 5.7683 13.1127 6.63737 12.3925 7.34888L12.392 7.35C12.392 7.35 12.242 7.49775 12.2195 7.51763L8.00001 11.25ZM4.40601 6.89813C4.40701 6.89813 4.52301 7.01362 4.54951 7.03837L8.00001 10.0905L11.455 7.03425C11.477 7.01362 11.594 6.89738 11.5945 6.897C12.1831 6.31542 12.5012 5.60514 12.5 4.875C12.5 3.97989 12.0259 3.12145 11.182 2.48851C10.3381 1.85558 9.19348 1.5 8.00001 1.5C6.80653 1.5 5.66194 1.85558 4.81803 2.48851C3.97411 3.12145 3.50001 3.97989 3.50001 4.875C3.49896 5.60559 3.81739 6.31628 4.40651 6.89813H4.40601Z" />
+              </svg>
+              <p class="text-light-content text-xs md:text-sm font-light pl-1">Online</p>
+            </div>
+          </div>
+          <p class="text-light-content text-xs md:text-sm font-light pl-1 min-w-fit">Jan 2022 - Present</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sección Abilities -->
+    <section>
+      <h1 class="text-2xl pt-10 text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+        Abilities
+      </h1>
+      <p class="text-light-content py-8 lg:max-w-3xl">
+        Blockchain development and audition in Solidity and currently learning development in Solana. React and Typescript frontend, ecommerce with traditional finance.
+      </p>
+    </section>
+
+    <!-- Sección Portafolio -->
+    <section>
+      <h1 class="text-2xl pt-10 text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+        Portafolio
+      </h1>
+      <a href="https://github.com/feralCode0x" target="_blank" rel="noreferrer noopener">
+        <p class="text-light-content py-8 lg:max-w-3xl font-bold hover:text-blue-400 transition-colors">
+          https://github.com/feralCode0x
+        </p>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Script Particles.js -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 6 }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        }
+      },
+      "retina_detect": true
+    });
+
+    // Menú móvil
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

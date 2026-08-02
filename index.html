@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Portfolio</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuración de colores personalizados de Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-heading': '#1f2937', 
+            'light-heading': '#f3f4f6', 
+            'dark-card': '#374151',
+            'content': '#4b5563',
+            'light-content': '#d1d5db'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* ---- particles.js container ---- */ 
+    #particles-js { 
+      position: fixed; /* Cambiado de absolute a fixed para que cubra todo al hacer scroll */
+      top: 0;
+      left: 0;
+      width: 100vw; 
+      height: 100vh; 
+      background-color: #000000; 
+      background-image: url(""); 
+      background-repeat: no-repeat; 
+      background-size: cover; 
+      background-position: 50% 50%; 
+      z-index: -1000;
+    }
+    
+    /* Para asegurar que el contenido se superponga correctamente a las partículas */
+    body {
+        position: relative;
+    }
+  </style>
+</head>
+<body class="bg-transparent transition-colors duration-300"> <!-- Fondo transparente para ver las partículas -->
+
+  <div id="particles-js"></div> 
+  <!-- <div class="count-particles"> <span class="js-count-particles">--</span> particles </div> -->
+  
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+
+  <!-- ================= HEADER ================= -->
+  <!-- Se agregó bg-white y z-10 para que flote sobre las partículas -->
+  <header class="bg-white w-full z-10 relative">
+    <div class="container mx-auto md:flex justify-between py-2 px-5 max-w-7xl">
+      <div class="flex justify-between items-center py-1 md:py-1"> <!-- Reducido el padding vertical -->
+        <!-- Logo -->
+        <a href="/">
+          <img class="w-14" src="img/feral2.png" alt="logo" />
+        </a>
+        
+        <!-- Botón Menú Móvil -->
+        <div id="menu-btn" class="cursor-pointer md:hidden">
+          <!-- Stroke cambiado a black -->
+          <svg class="stroke-black" width="25" height="20" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.4375 1.3125H14.5625M1.4375 11.3125H14.5625H1.4375ZM1.4375 6.3125H14.5625H1.4375Z" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+
+         <!-- Navegación -->
+      <nav id="mobile-menu" class="hidden text-center md:flex justify-between w-full md:w-auto">
+        <ul class="text-black font-medium md:flex items-center md:space-x-5 md:mr-7">
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io" class="hover:text-blue-500">Projects</a></li>
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io/about.html" class="hover:text-blue-500">About</a></li>
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io/stack.html" class="hover:text-blue-500">Stack</a></li>
+          <li class="pb-2 md:pb-0"><a href="https://feralcode0x.github.io/contact.html" class="text-blue-500 hover:text-blue-500">Contact</a></li>
+        </ul>
+        
+        <!-- Redes Sociales -->
+        <ul class="flex justify-center items-center my-5 md:my-0 md:space-x-5 md:mr-5">
+          <li>
+            <a href="https://github.com/feralCode0x" target="_blank" rel="noreferrer noopener">
+              <!-- Fill cambiado a black -->
+              <svg class="fill-black hover:fill-blue-500 transition-colors" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                <path d="M15 0C6.7125 0 0 6.7125 0 15C0 21.6375 4.29375 27.2437 10.2563 29.2313C11.0063 29.3625 11.2875 28.9125 11.2875 28.5188C11.2875 28.1625 11.2688 26.9813 11.2688 25.725C7.5 26.4188 6.525 24.8062 6.225 23.9625C6.05625 23.5312 5.325 22.2 4.6875 21.8438C4.1625 21.5625 3.4125 20.8687 4.66875 20.85C5.85 20.8313 6.69375 21.9375 6.975 22.3875C8.325 24.6562 10.4812 24.0187 11.3438 23.625C11.475 22.65 11.8688 21.9937 12.3 21.6187C8.9625 21.2437 5.475 19.95 5.475 14.2125C5.475 12.5813 6.05625 11.2313 7.0125 10.1813C6.8625 9.80625 6.3375 8.26875 7.1625 6.20625C7.1625 6.20625 8.41875 5.8125 11.2875 7.74375C12.4875 7.40625 13.7625 7.2375 15.0375 7.2375C16.3125 7.2375 17.5875 7.40625 18.7875 7.74375C21.6562 5.79375 22.9125 6.20625 22.9125 6.20625C23.7375 8.26875 23.2125 9.80625 23.0625 10.1813C24.0188 11.2313 24.6 12.5625 24.6 14.2125C24.6 19.9688 21.0938 21.2437 17.7563 21.6187C18.3 22.0875 18.7688 22.9875 18.7688 24.3937C18.7688 26.4 18.75 28.0125 18.75 28.5188C18.75 28.9125 19.0312 29.3813 19.7812 29.2313C22.759 28.2259 25.3465 26.3121 27.1796 23.7592C29.0127 21.2063 29.9991 18.1429 30 15C30 6.7125 23.2875 0 15 0Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<script>
+ particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},
+ "shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,
+ "height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},
+ "size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,
+ "distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,
+ "straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},
+ "interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},
+ "resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,
+ "speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},
+ "retina_detect":true});
+</script>
+
+  <!-- ================= MAIN: PROJECTS ================= -->
+  <!-- Reducido el pt-10 a pt-6 y asegurado que tenga posición relativa -->
+  <main class="container mx-auto px-5 max-w-7xl pt-6 mb-20 relative z-10">
+    <section>
+      <!-- Texto del título cambiado a blanco para contrastar con las partículas -->
+      <h1 class="text-2xl text-white md:text-4xl xl:text-5xl xl:leading-tight font-bold">
+        Projects
+      </h1>
+      
+      <!-- Grid de proyectos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10">
+        
+        <!-- ================= PROYECTO 1 ================= -->
+        <!-- Tarjeta sin clases oscuras -->
+       
+        <article class="rounded-xl mt-10 overflow-hidden shadow-xl shadow-slate-300 bg-white">
+          <img class="w-full h-48 object-cover" src="img/projects/project6.jpg" alt="Proyecto 2" loading="lazy" />
+          <div class="p-4 h-full">
+            <h1 class="text-dark-heading font-semibold text-lg pt-1">Dexert-app</h1>
+            <p class="text-content pt-4 font-light">Dex Descentralize exchange, descentralize finance, swap tokens erc20 on Ethereum blockchain at any time</p>
+            <h3 class="text-dark-heading font-medium pt-4">
+              Tech Stack : <span class="font-light">JavaScript: React, Node. Solidity</span>
+            </h3>
+            
+            <div class="flex justify-between items-center mt-5">
+              <div class="flex items-center">
+                <svg class="stroke-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2867 8.7133C10.6041 8.031 9.67846 7.64771 8.71334 7.64771C7.74821 7.64771 6.82259 8.031 6.14 8.7133L3.56584 11.2866C2.88324 11.9692 2.49976 12.895 2.49976 13.8604C2.49976 14.8257 2.88324 15.7515 3.56584 16.4341C4.24844 17.1167 5.17424 17.5002 6.13959 17.5002C7.10493 17.5002 8.03074 17.1167 8.71334 16.4341L10 15.1475" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8.71338 11.2867C9.39597 11.969 10.3216 12.3523 11.2867 12.3523C12.2518 12.3523 13.1775 11.969 13.86 11.2867L16.4342 8.71334C17.1168 8.03074 17.5003 7.10493 17.5003 6.13959C17.5003 5.17424 17.1168 4.24844 16.4342 3.56584C15.7516 2.88324 14.8258 2.49976 13.8605 2.49976C12.8951 2.49976 11.9693 2.88324 11.2867 3.56584L10 4.8525" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="https://feralcode0x.github.io/dexert-app/" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">Live Preview</a>
+              </div>
+              <div class="flex items-center">
+                <svg class="fill-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- path de Github -->
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.475 0 0 4.475 0 10C0 14.425 2.8625 18.1625 6.8375 19.4875C7.3375 19.575 7.525 19.275 7.525 19.0125C7.525 18.775 7.5125 17.9875 7.5125 17.15C5 17.6125 4.35 16.5375 4.15 15.975C4.0375 15.6875 3.55 14.8 3.125 14.5625C2.775 14.375 2.275 13.9125 3.1125 13.9C3.9 13.8875 4.4625 14.625 4.65 14.925C5.55 16.4375 6.9875 16.0125 7.5625 15.75C7.65 15.1 7.9125 14.6625 8.2 14.4125C5.975 14.1625 3.65 13.3 3.65 9.475C3.65 8.3875 4.0375 7.4875 4.675 6.7875C4.575 6.5375 4.225 5.5125 4.775 4.1375C4.775 4.1375 5.6125 3.875 7.525 5.1625C8.325 4.9375 9.175 4.825 10.025 4.825C10.875 4.825 11.725 4.9375 12.525 5.1625C14.4375 3.8625 15.275 4.1375 15.275 4.1375C15.825 5.5125 15.475 6.5375 15.375 6.7875C16.0125 7.4875 16.4 8.375 16.4 9.475C16.4 13.3125 14.0625 14.1625 11.8375 14.4125C12.2 14.725 12.5125 15.325 12.5125 16.2625C12.5125 17.6 12.5 18.675 12.5 19.0125C12.5 19.275 12.6875 19.5875 13.1875 19.4875C15.1726 18.8173 16.8976 17.5414 18.1197 15.8395C19.3418 14.1375 19.9994 12.0952 20 10C20 4.475 15.525 0 10 0Z" />
+                </svg>
+                <a href="https://github.com/feralCode0x/dexert-app" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">View Code</a>
+              </div>
+            </div>
+          </div>
+        </article>
+           <article class="rounded-xl mt-10 overflow-hidden shadow-xl shadow-slate-300 bg-white">
+          <img class="w-full h-48 object-cover" src="img/projects/project4.jpg" alt="Proyecto 2" loading="lazy" />
+          <div class="p-4 h-full">
+            <h1 class="text-dark-heading font-semibold text-lg pt-1">Classis</h1>
+            <p class="text-content pt-4 font-light">Classis Token is a Crypto token on mainnet L2 Optimism network, it has crowdsale and use as payment method for a photographic gallery classisfoto</p>
+            <h3 class="text-dark-heading font-medium pt-4">
+              Tech Stack : <span class="font-light">JavaScript: React, Node. Solidity</span>
+            </h3>
+            
+            <div class="flex justify-between items-center mt-5">
+              <div class="flex items-center">
+                <svg class="stroke-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2867 8.7133C10.6041 8.031 9.67846 7.64771 8.71334 7.64771C7.74821 7.64771 6.82259 8.031 6.14 8.7133L3.56584 11.2866C2.88324 11.9692 2.49976 12.895 2.49976 13.8604C2.49976 14.8257 2.88324 15.7515 3.56584 16.4341C4.24844 17.1167 5.17424 17.5002 6.13959 17.5002C7.10493 17.5002 8.03074 17.1167 8.71334 16.4341L10 15.1475" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8.71338 11.2867C9.39597 11.969 10.3216 12.3523 11.2867 12.3523C12.2518 12.3523 13.1775 11.969 13.86 11.2867L16.4342 8.71334C17.1168 8.03074 17.5003 7.10493 17.5003 6.13959C17.5003 5.17424 17.1168 4.24844 16.4342 3.56584C15.7516 2.88324 14.8258 2.49976 13.8605 2.49976C12.8951 2.49976 11.9693 2.88324 11.2867 3.56584L10 4.8525" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="https://feralcode0x.github.io/classis" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">Live Preview</a>
+              </div>
+              <div class="flex items-center">
+                <svg class="fill-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- path de Github -->
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.475 0 0 4.475 0 10C0 14.425 2.8625 18.1625 6.8375 19.4875C7.3375 19.575 7.525 19.275 7.525 19.0125C7.525 18.775 7.5125 17.9875 7.5125 17.15C5 17.6125 4.35 16.5375 4.15 15.975C4.0375 15.6875 3.55 14.8 3.125 14.5625C2.775 14.375 2.275 13.9125 3.1125 13.9C3.9 13.8875 4.4625 14.625 4.65 14.925C5.55 16.4375 6.9875 16.0125 7.5625 15.75C7.65 15.1 7.9125 14.6625 8.2 14.4125C5.975 14.1625 3.65 13.3 3.65 9.475C3.65 8.3875 4.0375 7.4875 4.675 6.7875C4.575 6.5375 4.225 5.5125 4.775 4.1375C4.775 4.1375 5.6125 3.875 7.525 5.1625C8.325 4.9375 9.175 4.825 10.025 4.825C10.875 4.825 11.725 4.9375 12.525 5.1625C14.4375 3.8625 15.275 4.1375 15.275 4.1375C15.825 5.5125 15.475 6.5375 15.375 6.7875C16.0125 7.4875 16.4 8.375 16.4 9.475C16.4 13.3125 14.0625 14.1625 11.8375 14.4125C12.2 14.725 12.5125 15.325 12.5125 16.2625C12.5125 17.6 12.5 18.675 12.5 19.0125C12.5 19.275 12.6875 19.5875 13.1875 19.4875C15.1726 18.8173 16.8976 17.5414 18.1197 15.8395C19.3418 14.1375 19.9994 12.0952 20 10C20 4.475 15.525 0 10 0Z" />
+                </svg>
+                <a href="https://github.com/feralCode0x/classis" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">View Code</a>
+              </div>
+            </div>
+          </div>
+        </article>
+               <article class="rounded-xl mt-10 overflow-hidden shadow-xl shadow-slate-300 bg-white">
+          <img class="w-full h-48 object-cover" src="img/projects/project3.jpg" alt="Proyecto 2" loading="lazy" />
+          <div class="p-4 h-full">
+            <h1 class="text-dark-heading font-semibold text-lg pt-1">Commercy</h1>
+            <p class="text-content pt-4 font-light">Ecommerce webapp platform with payment method and panel admin</p>
+            <h3 class="text-dark-heading font-medium pt-4">
+              Tech Stack : <span class="font-light">JavaScript: React, Node, axios, express, mongodb, mongoose. </span>
+            </h3>
+            
+            <div class="flex justify-between items-center mt-5">
+              <div class="flex items-center">
+                <svg class="stroke-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2867 8.7133C10.6041 8.031 9.67846 7.64771 8.71334 7.64771C7.74821 7.64771 6.82259 8.031 6.14 8.7133L3.56584 11.2866C2.88324 11.9692 2.49976 12.895 2.49976 13.8604C2.49976 14.8257 2.88324 15.7515 3.56584 16.4341C4.24844 17.1167 5.17424 17.5002 6.13959 17.5002C7.10493 17.5002 8.03074 17.1167 8.71334 16.4341L10 15.1475" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8.71338 11.2867C9.39597 11.969 10.3216 12.3523 11.2867 12.3523C12.2518 12.3523 13.1775 11.969 13.86 11.2867L16.4342 8.71334C17.1168 8.03074 17.5003 7.10493 17.5003 6.13959C17.5003 5.17424 17.1168 4.24844 16.4342 3.56584C15.7516 2.88324 14.8258 2.49976 13.8605 2.49976C12.8951 2.49976 11.9693 2.88324 11.2867 3.56584L10 4.8525" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="https://github.com/feralCode0x/commercy" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">Live Preview</a>
+              </div>
+              <div class="flex items-center">
+                <svg class="fill-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- path de Github -->
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.475 0 0 4.475 0 10C0 14.425 2.8625 18.1625 6.8375 19.4875C7.3375 19.575 7.525 19.275 7.525 19.0125C7.525 18.775 7.5125 17.9875 7.5125 17.15C5 17.6125 4.35 16.5375 4.15 15.975C4.0375 15.6875 3.55 14.8 3.125 14.5625C2.775 14.375 2.275 13.9125 3.1125 13.9C3.9 13.8875 4.4625 14.625 4.65 14.925C5.55 16.4375 6.9875 16.0125 7.5625 15.75C7.65 15.1 7.9125 14.6625 8.2 14.4125C5.975 14.1625 3.65 13.3 3.65 9.475C3.65 8.3875 4.0375 7.4875 4.675 6.7875C4.575 6.5375 4.225 5.5125 4.775 4.1375C4.775 4.1375 5.6125 3.875 7.525 5.1625C8.325 4.9375 9.175 4.825 10.025 4.825C10.875 4.825 11.725 4.9375 12.525 5.1625C14.4375 3.8625 15.275 4.1375 15.275 4.1375C15.825 5.5125 15.475 6.5375 15.375 6.7875C16.0125 7.4875 16.4 8.375 16.4 9.475C16.4 13.3125 14.0625 14.1625 11.8375 14.4125C12.2 14.725 12.5125 15.325 12.5125 16.2625C12.5125 17.6 12.5 18.675 12.5 19.0125C12.5 19.275 12.6875 19.5875 13.1875 19.4875C15.1726 18.8173 16.8976 17.5414 18.1197 15.8395C19.3418 14.1375 19.9994 12.0952 20 10C20 4.475 15.525 0 10 0Z" />
+                </svg>
+                <a href="https://github.com/feralCode0x/commercy" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">View Code</a>
+              </div>
+            </div>
+          </div>
+        </article>
+         <article class="rounded-xl mt-10 overflow-hidden shadow-xl shadow-slate-300 bg-white">
+          <img class="w-full h-48 object-cover" src="img/projects/project1.jpg" alt="Proyecto 1" loading="lazy" />
+          <div class="p-4 h-full">
+            <h1 class="text-dark-heading font-semibold text-lg pt-1">Arandano</h1>
+            <p class="text-content pt-4 font-light">Cryptography Token on Binance Smart Chain (BSC)</p>
+            <h3 class="text-dark-heading font-medium pt-4">
+              Tech Stack : <span class="font-light">Solidity</span>
+            </h3>
+            
+            <div class="flex justify-between items-center mt-5">
+              <div class="flex items-center">
+                <svg class="stroke-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2867 8.7133C10.6041 8.031 9.67846 7.64771 8.71334 7.64771C7.74821 7.64771 6.82259 8.031 6.14 8.7133L3.56584 11.2866C2.88324 11.9692 2.49976 12.895 2.49976 13.8604C2.49976 14.8257 2.88324 15.7515 3.56584 16.4341C4.24844 17.1167 5.17424 17.5002 6.13959 17.5002C7.10493 17.5002 8.03074 17.1167 8.71334 16.4341L10 15.1475" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8.71338 11.2867C9.39597 11.969 10.3216 12.3523 11.2867 12.3523C12.2518 12.3523 13.1775 11.969 13.86 11.2867L16.4342 8.71334C17.1168 8.03074 17.5003 7.10493 17.5003 6.13959C17.5003 5.17424 17.1168 4.24844 16.4342 3.56584C15.7516 2.88324 14.8258 2.49976 13.8605 2.49976C12.8951 2.49976 11.9693 2.88324 11.2867 3.56584L10 4.8525" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="https://bscscan.com/token/0xeaa86d8f8453f7295deef82bfee9757ed9c18acc#code" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">Live Preview</a>
+              </div>
+              <div class="flex items-center">
+                <svg class="fill-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- path de Github -->
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.475 0 0 4.475 0 10C0 14.425 2.8625 18.1625 6.8375 19.4875C7.3375 19.575 7.525 19.275 7.525 19.0125C7.525 18.775 7.5125 17.9875 7.5125 17.15C5 17.6125 4.35 16.5375 4.15 15.975C4.0375 15.6875 3.55 14.8 3.125 14.5625C2.775 14.375 2.275 13.9125 3.1125 13.9C3.9 13.8875 4.4625 14.625 4.65 14.925C5.55 16.4375 6.9875 16.0125 7.5625 15.75C7.65 15.1 7.9125 14.6625 8.2 14.4125C5.975 14.1625 3.65 13.3 3.65 9.475C3.65 8.3875 4.0375 7.4875 4.675 6.7875C4.575 6.5375 4.225 5.5125 4.775 4.1375C4.775 4.1375 5.6125 3.875 7.525 5.1625C8.325 4.9375 9.175 4.825 10.025 4.825C10.875 4.825 11.725 4.9375 12.525 5.1625C14.4375 3.8625 15.275 4.1375 15.275 4.1375C15.825 5.5125 15.475 6.5375 15.375 6.7875C16.0125 7.4875 16.4 8.375 16.4 9.475C16.4 13.3125 14.0625 14.1625 11.8375 14.4125C12.2 14.725 12.5125 15.325 12.5125 16.2625C12.5125 17.6 12.5 18.675 12.5 19.0125C12.5 19.275 12.6875 19.5875 13.1875 19.4875C15.1726 18.8173 16.8976 17.5414 18.1197 15.8395C19.3418 14.1375 19.9994 12.0952 20 10C20 4.475 15.525 0 10 0Z" />
+                </svg>
+                <a href="https://github.com/feralCode0x/arandano" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">View Code</a>
+              </div>
+            </div>
+          </div>
+        </article>
+           <article class="rounded-xl mt-10 overflow-hidden shadow-xl shadow-slate-300 bg-white">
+          <img class="w-full h-48 object-cover" src="img/projects/project5.jpg" alt="Proyecto 2" loading="lazy" />
+          <div class="p-4 h-full">
+            <h1 class="text-dark-heading font-semibold text-lg pt-1">
+             Arbol
+            </h1>
+            <p class="text-content pt-4 font-light">MerkleTree selector, this script generates MerkleTree Proofs on console for pentesting and blockchain auditing</p>
+            <h3 class="text-dark-heading font-medium pt-4">
+              Tech Stack : <span class="font-light">JavaScript: Node. Solidity</span>
+            </h3>
+            
+            <div class="flex justify-between items-center mt-5">
+              <div class="flex items-center">
+                <svg class="stroke-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2867 8.7133C10.6041 8.031 9.67846 7.64771 8.71334 7.64771C7.74821 7.64771 6.82259 8.031 6.14 8.7133L3.56584 11.2866C2.88324 11.9692 2.49976 12.895 2.49976 13.8604C2.49976 14.8257 2.88324 15.7515 3.56584 16.4341C4.24844 17.1167 5.17424 17.5002 6.13959 17.5002C7.10493 17.5002 8.03074 17.1167 8.71334 16.4341L10 15.1475" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8.71338 11.2867C9.39597 11.969 10.3216 12.3523 11.2867 12.3523C12.2518 12.3523 13.1775 11.969 13.86 11.2867L16.4342 8.71334C17.1168 8.03074 17.5003 7.10493 17.5003 6.13959C17.5003 5.17424 17.1168 4.24844 16.4342 3.56584C15.7516 2.88324 14.8258 2.49976 13.8605 2.49976C12.8951 2.49976 11.9693 2.88324 11.2867 3.56584L10 4.8525" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="https://github.com/feralCode0x/arbol" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">Live Preview</a>
+              </div>
+              <div class="flex items-center">
+                <svg class="fill-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- path de Github -->
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.475 0 0 4.475 0 10C0 14.425 2.8625 18.1625 6.8375 19.4875C7.3375 19.575 7.525 19.275 7.525 19.0125C7.525 18.775 7.5125 17.9875 7.5125 17.15C5 17.6125 4.35 16.5375 4.15 15.975C4.0375 15.6875 3.55 14.8 3.125 14.5625C2.775 14.375 2.275 13.9125 3.1125 13.9C3.9 13.8875 4.4625 14.625 4.65 14.925C5.55 16.4375 6.9875 16.0125 7.5625 15.75C7.65 15.1 7.9125 14.6625 8.2 14.4125C5.975 14.1625 3.65 13.3 3.65 9.475C3.65 8.3875 4.0375 7.4875 4.675 6.7875C4.575 6.5375 4.225 5.5125 4.775 4.1375C4.775 4.1375 5.6125 3.875 7.525 5.1625C8.325 4.9375 9.175 4.825 10.025 4.825C10.875 4.825 11.725 4.9375 12.525 5.1625C14.4375 3.8625 15.275 4.1375 15.275 4.1375C15.825 5.5125 15.475 6.5375 15.375 6.7875C16.0125 7.4875 16.4 8.375 16.4 9.475C16.4 13.3125 14.0625 14.1625 11.8375 14.4125C12.2 14.725 12.5125 15.325 12.5125 16.2625C12.5125 17.6 12.5 18.675 12.5 19.0125C12.5 19.275 12.6875 19.5875 13.1875 19.4875C15.1726 18.8173 16.8976 17.5414 18.1197 15.8395C19.3418 14.1375 19.9994 12.0952 20 10C20 4.475 15.525 0 10 0Z" />
+                </svg>
+                <a href="https://github.com/feralCode0x/arbol" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">View Code</a>
+              </div>
+            </div>
+          </div>
+        </article>
+           <article class="rounded-xl mt-10 overflow-hidden shadow-xl shadow-slate-300 bg-white">
+          <img class="w-full h-48 object-cover" src="img/projects/project2.jpg" alt="Proyecto 2" loading="lazy" />
+          <div class="p-4 h-full">
+            <h1 class="text-dark-heading font-semibold text-lg pt-1">Bridge Op</h1>
+            <p class="text-content pt-4 font-light">Standard Bridge example, L1 L2 layer comunication backend only, Solidity, L1 Ethereu & L2 Optimism</p>
+            <h3 class="text-dark-heading font-medium pt-4">
+              Tech Stack : <span class="font-light">Solidity</span>
+            </h3>
+            
+            <div class="flex justify-between items-center mt-5">
+              <div class="flex items-center">
+                <svg class="stroke-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2867 8.7133C10.6041 8.031 9.67846 7.64771 8.71334 7.64771C7.74821 7.64771 6.82259 8.031 6.14 8.7133L3.56584 11.2866C2.88324 11.9692 2.49976 12.895 2.49976 13.8604C2.49976 14.8257 2.88324 15.7515 3.56584 16.4341C4.24844 17.1167 5.17424 17.5002 6.13959 17.5002C7.10493 17.5002 8.03074 17.1167 8.71334 16.4341L10 15.1475" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8.71338 11.2867C9.39597 11.969 10.3216 12.3523 11.2867 12.3523C12.2518 12.3523 13.1775 11.969 13.86 11.2867L16.4342 8.71334C17.1168 8.03074 17.5003 7.10493 17.5003 6.13959C17.5003 5.17424 17.1168 4.24844 16.4342 3.56584C15.7516 2.88324 14.8258 2.49976 13.8605 2.49976C12.8951 2.49976 11.9693 2.88324 11.2867 3.56584L10 4.8525" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href="https://github.com/feralCode0x/bridge_op" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">Live Preview</a>
+              </div>
+              <div class="flex items-center">
+                <svg class="fill-dark-heading inline-block min-w-fit" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- path de Github -->
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.475 0 0 4.475 0 10C0 14.425 2.8625 18.1625 6.8375 19.4875C7.3375 19.575 7.525 19.275 7.525 19.0125C7.525 18.775 7.5125 17.9875 7.5125 17.15C5 17.6125 4.35 16.5375 4.15 15.975C4.0375 15.6875 3.55 14.8 3.125 14.5625C2.775 14.375 2.275 13.9125 3.1125 13.9C3.9 13.8875 4.4625 14.625 4.65 14.925C5.55 16.4375 6.9875 16.0125 7.5625 15.75C7.65 15.1 7.9125 14.6625 8.2 14.4125C5.975 14.1625 3.65 13.3 3.65 9.475C3.65 8.3875 4.0375 7.4875 4.675 6.7875C4.575 6.5375 4.225 5.5125 4.775 4.1375C4.775 4.1375 5.6125 3.875 7.525 5.1625C8.325 4.9375 9.175 4.825 10.025 4.825C10.875 4.825 11.725 4.9375 12.525 5.1625C14.4375 3.8625 15.275 4.1375 15.275 4.1375C15.825 5.5125 15.475 6.5375 15.375 6.7875C16.0125 7.4875 16.4 8.375 16.4 9.475C16.4 13.3125 14.0625 14.1625 11.8375 14.4125C12.2 14.725 12.5125 15.325 12.5125 16.2625C12.5125 17.6 12.5 18.675 12.5 19.0125C12.5 19.275 12.6875 19.5875 13.1875 19.4875C15.1726 18.8173 16.8976 17.5414 18.1197 15.8395C19.3418 14.1375 19.9994 12.0952 20 10C20 4.475 15.525 0 10 0Z" />
+                </svg>
+                <a href="https://github.com/feralCode0x/bridge_op" target="_blank" rel="noreferrer noopener" class="underline pl-2 font-light text-black">View Code</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Script para la funcionalidad del botón de menú en móviles -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      // Agrega o quita la clase 'hidden' al hacer clic
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
